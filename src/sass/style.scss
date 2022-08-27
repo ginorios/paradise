@@ -1,0 +1,431 @@
+
+@use './mediaQuery.scss' as m;
+
+// CSS Reset
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  line-height: calc(1em + 0.5rem);
+  -webkit-font-smoothing: antialiased;
+}
+
+u[role='list'], ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+* {
+ 
+  font-family: 'Poppins', sans-serif;
+}
+
+@include m.breakpoint(medium) {
+  .imageBackground {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+  }
+
+  nav {
+    //Menu
+    .menu, .close {
+      position: absolute;
+      top: 1%;
+      left: 85%;
+      height: 1.5rem;
+      padding: 1rem 0 1rem 1rem;
+      z-index: 2;
+
+      .bar {
+        background: #9D3934;
+        width: 2rem;
+        height: 0.3rem;
+        transition: all 0.1s ease-in-out;
+      }
+
+      .top {
+        margin-bottom: 0.3rem;
+      }
+
+      .bot {
+        margin-top: 0.3rem;
+      }
+    }
+
+    //Close
+    .close {
+      .top {
+        transform: translate(10px);
+      }
+
+      .bot {
+        transform: translate(-10px);
+      }
+    }
+
+    //Navigation
+    .navClose, .navOpen {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+      width: 92.7%;
+      padding-right: 2rem;
+      list-style: none;
+      background: white;
+      list-style: none;
+      position: absolute;
+      top: 0%;
+      z-index: 1;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .navOpen {
+      height: 100vh;
+    }
+
+
+    .navClose {
+      opacity: 0;
+      height: 0vh;
+    }
+    
+  }
+
+  .heading {
+    position: absolute;
+    top: -10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+    width: 99.5vw;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 0.5rem;
+    }
+
+    p {
+      padding: 0.5rem 0.5rem 2.5rem;
+    }
+
+    .headButton {
+      width: 30%;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      color: white;
+      background: #9D3934;
+      border: none;
+    }
+  }
+
+  //Section
+  //Info
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dashed #9D3934;
+
+    .infoTitle {
+      font-size: 2rem;
+      padding: 2rem;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      
+      .infoIcons {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        height: 120px;
+        width: 120px;
+      }
+
+      .infoDesc {
+        width: 40vw;
+
+        h1 {
+          color: #D64E47;
+          font-size: 1.1rem;
+          font-weight: 500;
+          line-height: 2.5rem;
+        }
+      }
+
+    }
+  }
+
+  //Safety
+  .safety {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem 2rem 2rem; 
+    border-bottom: 1px dashed #9D3934;
+
+    .safeTitle {
+      font-weight: 700;
+      font-size: 1.8rem;
+      padding: 2rem;
+      line-height: 2rem;
+    }
+
+    .safeList {
+      width: 80%;
+      padding-left: 2rem;
+      list-style-type: decimal-leading-zero;
+    }
+  }
+
+  //Pricing
+
+  .pricing, .priceTitle, .priceModel, .priceList {
+    //This style is for testing.
+    //border: 1px solid black;
+  }
+  .pricing, .priceTitle, .priceModel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .priceTitle, .priceModel, .priceList {
+    width: 80%;
+  }
+
+  .pricing, .priceList {
+    padding: 2rem;
+  }
+
+  .priceTitle, .priceModel {
+    padding: 1rem 2rem;
+  }
+  
+  .priceModel h3, .priceModel button {
+    padding: 1rem;
+  }
+
+  .pricing {
+    border-bottom: 1px dashed #9D3934;
+
+    .priceTitle {
+      h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+
+    .priceModel {
+      h3 {
+        font-size: 3rem;
+      }
+
+      p {
+        border-bottom: 3px solid #9D3934;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        width: 65%;
+        border-radius: 30px;
+        color: white;
+        background: #9D3934;
+        border: none;
+      }
+    }
+
+    .priceList {
+      list-style-type: ' ✓ ';
+    }
+  }
+
+  //Destinations
+  .destTitle, .destContainer, .destinations {
+    //This style is for testing.
+    //border: 1px solid black;
+  }
+
+  .destTitle {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 1rem 0;
+    width: 68.5%;
+    margin-inline: auto;
+
+    p {
+      color: #808080;
+      padding: 2.5rem 0 0.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 0.5rem 0;
+    }
+  }
+
+  .destContainer {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 2.5rem;
+    //width: 86vw;
+
+    .destinations {
+      padding: 1rem;
+      width: 400px;
+
+      .destImg {
+        object-fit: cover;
+        border-radius: 20px;
+        height: 400px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 1rem 0;
+      }
+    }
+    
+  }
+
+  //Footer
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #9D3934;
+    color: white;
+    height: 30vh;
+    padding-left: 2rem;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+  }
+
+  //Country Display
+  .countryCont {
+    padding: 5rem 1.5rem 0 1.5rem;
+
+    h2, h3 {
+      padding: 1rem 0;
+    }
+
+    h4, a {
+      color: lightgrey;
+    }
+
+    h2 {
+      padding-bottom: 0.5rem;
+      font-size: 2.2rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+    
+    h4 {
+      font-size: 1.5rem;
+      padding-top: 0.5rem;
+    }
+
+    p {
+      line-height: 1.8rem;
+      padding-bottom: 1rem;
+    }
+
+    li {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding-left: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .longTitle {
+      line-height: 2.2rem;
+    }
+
+    .countryDesc {
+      h2 {
+        border-bottom: 1px solid black;
+      }
+    }
+
+    .countryActivities {
+      box-shadow: 0 0 0 100vmax #9D3934;
+      clip-path: inset(0 -100vmax);
+
+      background-color: #9D3934;
+      color: white;
+      padding: 2rem 0;
+
+
+      .restaurants, .attractions {
+        border-bottom: 1px solid white;
+      }
+
+    }
+
+  }
+
+  //Assets
+  .assetCont {
+    padding: 5rem 1.5rem 0 1.5rem;
+
+    .assets {
+
+      p {
+        padding: 1rem;
+        margin: 0.5rem 0;
+        background: #9D3934;
+        font-size: 1.5rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        color: white;
+        z-index: 1 !important;
+      }
+    }
+
+  }
+
+
+}
