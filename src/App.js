@@ -16,6 +16,8 @@ import Hawaii from './components/02_section/countries/Hawaii.js'
 import Assets from './components/03_footer/Assets.js'
 import assetData from './components/03_footer/data/assetData.js'
 
+import ScrollTop from './components/ScrollTop.js'
+
 import './main.scss'
 
 export default function App() {
@@ -36,6 +38,7 @@ export default function App() {
 
 
       <BrowserRouter>
+        <ScrollTop />
         <Routes>
           <Route path='/' element={
             <>

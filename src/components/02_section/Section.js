@@ -55,7 +55,7 @@ export default function Section() {
       <div id='price' className='pricing'>
         <div className='priceTitle'>
           <h1>Pricing</h1>
-          <p>Money-back guarantee.<a href=''>Maybe</a></p>
+          <p>Money-back guarantee. <a href='https://www.youtube.com/watch?v=zL19uMsnpSU' tariget='_blank'>Maybe</a></p>
         </div>
 
         <div className='priceModel'>

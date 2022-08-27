@@ -90,7 +90,7 @@ p, h1, h2, h3, h4, h5, h6 {
       justify-content: center;
       align-items: flex-end;
       flex-direction: column;
-      width: 92.7%;
+      width: min(100% - 2rem);
       padding-right: 2rem;
       list-style: none;
       background: white;
@@ -113,6 +113,7 @@ p, h1, h2, h3, h4, h5, h6 {
     
   }
 
+  //Header
   .heading {
     position: absolute;
     top: -10%;
@@ -200,7 +201,6 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     .safeList {
-      width: 80%;
       padding-left: 2rem;
       list-style-type: decimal-leading-zero;
     }
@@ -218,7 +218,7 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
 
-  .priceTitle, .priceModel, .priceList {
+  .priceModel {
     width: 80%;
   }
 
@@ -406,7 +406,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   //Assets
   .assetCont {
-    padding: 5rem 1.5rem 0 1.5rem;
+    padding-top: 5rem;
 
     .assets {
 
@@ -421,7 +421,6 @@ p, h1, h2, h3, h4, h5, h6 {
         text-decoration: none;
         color: black;
         color: white;
-        z-index: 1 !important;
       }
     }
 
