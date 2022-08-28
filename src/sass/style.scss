@@ -36,7 +36,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 * {
- 
+  //border: 1px solid black;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -90,7 +90,7 @@ p, h1, h2, h3, h4, h5, h6 {
       justify-content: center;
       align-items: flex-end;
       flex-direction: column;
-      width: min(100% - 2rem);
+      width: min(98% - 2rem);
       padding-right: 2rem;
       list-style: none;
       background: white;
@@ -123,7 +123,7 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     color: white;
     height: 100vh;
-    width: 99.5vw;
+    width: 98vw;
 
     h1 {
       font-size: 2rem;
@@ -136,7 +136,8 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     .headButton {
-      width: 30%;
+      width: min(40%, 200px);
+      height: 60px;
       padding: 0.5rem 1rem;
       border-radius: 30px;
       color: white;
@@ -150,9 +151,9 @@ p, h1, h2, h3, h4, h5, h6 {
   .infoContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-bottom: 1px dashed #9D3934;
+    padding-bottom: 1rem;
 
     .infoTitle {
       font-size: 2rem;
@@ -161,18 +162,26 @@ p, h1, h2, h3, h4, h5, h6 {
 
     .info {
       display: flex;
+      flex-direction: column;
       align-items: center;
+      width: min(100%, 400px);
+      //margin-inline: auto;
       
       .infoIcons {
         display: flex;
         align-items: center;
         padding: 1rem;
         height: 120px;
-        width: 120px;
+        width: 90%;
       }
 
       .infoDesc {
-        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+        width: min(100% - 2rem);
+        //margin-inline: auto;
 
         h1 {
           color: #D64E47;
@@ -222,10 +231,6 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 80%;
   }
 
-  .pricing, .priceList {
-    padding: 2rem;
-  }
-
   .priceTitle, .priceModel {
     padding: 1rem 2rem;
   }
@@ -236,6 +241,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   .pricing {
     border-bottom: 1px dashed #9D3934;
+    padding: 2rem 0;
 
     .priceTitle {
       h1 {
@@ -256,7 +262,7 @@ p, h1, h2, h3, h4, h5, h6 {
       }
 
       button {
-        width: 65%;
+        width: min(65%, 300px);
         border-radius: 30px;
         color: white;
         background: #9D3934;
@@ -265,6 +271,7 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     .priceList {
+      padding: 2rem;
       list-style-type: ' ✓ ';
     }
   }
@@ -279,7 +286,7 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     padding: 0 2rem 1rem 0;
-    width: 68.5%;
+    width: min(75% - 2rem, 600px);
     margin-inline: auto;
 
     p {
@@ -298,7 +305,8 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     overflow-x: auto;
     padding: 0 2.5rem;
-    //width: 86vw;
+    width: min(75%, 700px);
+    margin-inline: auto;
 
     .destinations {
       padding: 1rem;
@@ -337,7 +345,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
   //Country Display
   .countryCont {
-    padding: 5rem 1.5rem 0 1.5rem;
+    //padding: 5rem 1.5rem 0 1.5rem;
+    padding-top: 5rem;;
+    width: min(80%, 600px);
+    margin-inline: auto;
 
     h2, h3 {
       padding: 1rem 0;
@@ -409,6 +420,8 @@ p, h1, h2, h3, h4, h5, h6 {
     padding-top: 5rem;
 
     .assets {
+      width: min(90%, 600px);
+      margin-inline: auto;
 
       p {
         padding: 1rem;
@@ -424,6 +437,53 @@ p, h1, h2, h3, h4, h5, h6 {
       }
     }
 
+  }
+
+
+}
+
+@include m.breakpoint(large) {
+
+  //Navigation
+  nav {
+
+    .menu, .close {
+
+      .bar {
+        display: none;
+      }
+    }
+
+    .navClose, .navOpen {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-start;
+      opacity: 1;
+      background: none;
+      padding-top: 1rem;
+
+    }
+  }
+
+  //Info
+  .infoContainer {
+
+    .info {
+      flex-direction: row;
+      width: min(80%, 480px);
+    }
+  }
+
+  //Destination
+  .destContainer {
+
+    .destinations {
+      width: 200px;
+      
+      .destImg {
+        height: 200px;
+      }
+    }
   }
 
 

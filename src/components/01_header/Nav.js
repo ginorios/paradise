@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
 import styles from '../style.js'
@@ -9,6 +9,7 @@ export default function Nav() {
   //Menu Toggle
   let [toggle, setToggle] = useState(true)
 
+  //Function to menu toggle
   function fToggle() {
     setToggle(!toggle)
   }
