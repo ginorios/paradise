@@ -6,7 +6,6 @@ import Header from './components/01_header/Header.js'
 import Section from './components/02_section/Section.js'
 import Footer from './components/03_footer/Footer.js'
 import Nav from './components/01_header/Nav.js'
-import NotFound from './components/NotFound.js'
 
 import Japan from './components/02_section/countries/Japan.js'
 import Italy from './components/02_section/countries/Italy.js'
@@ -58,12 +57,6 @@ export default function App() {
               <Nav />
               {assets}
             </div>
-          } />
-          <Route path='*' element={
-            <>
-              <Nav />
-              <NotFound />
-            </>
           } />
 
         </Routes>
