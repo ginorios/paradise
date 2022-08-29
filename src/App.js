@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 import Header from './components/01_header/Header.js'
 import Section from './components/02_section/Section.js'
@@ -36,7 +36,7 @@ export default function App() {
     <>
 
 
-      <BrowserRouter>
+      <HashRouter>
         <ScrollTop />
         <Routes>
           <Route path='/' element={
@@ -60,7 +60,7 @@ export default function App() {
           } />
 
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
